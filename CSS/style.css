@@ -1,0 +1,568 @@
+:root {
+  --color-primary-dark: #17202a;
+  --color-accent: #e9a23b;
+  --color-accent-hover: #d48e28;
+  --color-deep-dark: #101820;
+  --color-gradient-start: #3a424a;
+  --color-gradient-end: #abb0b5;
+  --color-bg-light: #f8fafc;
+  --color-card-bg: #ffffff;
+  --color-text-main: #17202a;
+  --color-text-muted: #64748b;
+  --color-text-light: #94a3b8;
+  --font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --radius-card: 20px;
+  --radius-btn: 6px;
+  --transition-smooth: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-bg-light);
+  color: var(--color-text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* ===================================================
+   BUTTONS
+=================================================== */
+.btn {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: var(--radius-btn);
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: var(--transition-smooth);
+  text-align: center;
+}
+
+.btn-dark {
+  background-color: var(--color-primary-dark);
+  color: #ffffff;
+}
+
+.btn-dark:hover {
+  background-color: var(--color-accent);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(233, 162, 59, 0.3);
+}
+
+.btn-primary {
+  background-color: var(--color-accent);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(233, 162, 59, 0.4);
+}
+
+/* ===================================================
+   HEADER & NAVBAR
+=================================================== */
+.header {
+  background-color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.nav-container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--color-primary-dark);
+  letter-spacing: -0.5px;
+}
+
+.logo-dot {
+  color: var(--color-accent);
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: #475569;
+  position: relative;
+  transition: var(--transition-smooth);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--color-primary-dark);
+  font-weight: 600;
+}
+
+.nav-btn {
+  font-size: 13px;
+  padding: 9px 20px;
+}
+
+/* ===================================================
+   HERO SECTION
+=================================================== */
+.hero-section {
+  background: linear-gradient(95deg, var(--color-gradient-start) 0%, #5d6771 50%, var(--color-gradient-end) 100%);
+  padding: 85px 0;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 580px;
+}
+
+.hero-tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.2px;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.hero-title {
+  font-size: 46px;
+  font-weight: 800;
+  line-height: 1.18;
+  color: #ffffff;
+  margin-bottom: 18px;
+  letter-spacing: -0.5px;
+}
+
+.hero-title .highlight {
+  color: var(--color-accent);
+}
+
+.hero-description {
+  font-size: 14.5px;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.65;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+.hero-btn {
+  padding: 12px 28px;
+  font-size: 14px;
+}
+
+/* ===================================================
+   POPULAR DESTINATIONS SECTION
+=================================================== */
+.destinations-section {
+  padding: 70px 0 80px;
+  background-color: var(--color-bg-light);
+}
+
+.destinations-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-tag {
+  display: block;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.section-title {
+  font-size: 34px;
+  font-weight: 800;
+  color: var(--color-primary-dark);
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+
+.section-subtitle {
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+
+/* ===================================================
+   DESTINATION CARD
+=================================================== */
+.destination-slider-wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.destination-card {
+  width: 100%;
+  height: 480px;
+  background-color: var(--color-card-bg);
+  border-radius: var(--radius-card);
+  box-shadow: 0 16px 40px -10px rgba(16, 24, 32, 0.1), 0 4px 14px rgba(0, 0, 0, 0.03);
+  display: grid;
+  grid-template-columns: 46% 54%;
+  overflow: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.destination-card.fade-out {
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+.destination-card.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Card Info (Left Column) */
+.card-info {
+  padding: 38px 46px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.card-counter {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-accent);
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+}
+
+.card-country {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-light);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.card-city {
+  font-size: 38px;
+  font-weight: 800;
+  color: var(--color-primary-dark);
+  line-height: 1.1;
+  margin-bottom: 14px;
+  letter-spacing: -0.5px;
+}
+
+.card-description {
+  font-size: 13.5px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: 24px;
+  min-height: 65px;
+}
+
+/* Specs Grid */
+.card-specs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 28px;
+  margin-bottom: 26px;
+}
+
+.spec-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.spec-label {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin-bottom: 3px;
+}
+
+.spec-value {
+  font-size: 12.5px;
+  color: var(--color-text-light);
+  font-weight: 400;
+}
+
+.card-btn {
+  align-self: flex-start;
+  padding: 10px 24px;
+  font-size: 13px;
+}
+
+/* Card Image (Right Column) */
+.card-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.destination-card:hover .card-img {
+  transform: scale(1.02);
+}
+
+/* Floating Destination Badge */
+.destination-badge {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 12px 22px;
+  box-shadow: 0 10px 25px rgba(16, 24, 32, 0.15);
+  text-align: center;
+  min-width: 95px;
+  user-select: none;
+}
+
+.badge-label {
+  display: block;
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.badge-number {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--color-accent);
+  line-height: 1;
+}
+
+/* ===================================================
+   SLIDER CONTROLS
+=================================================== */
+.slider-controls {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.control-btn {
+  padding: 9px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 7px;
+  transition: var(--transition-smooth);
+}
+
+.prev-btn {
+  background-color: var(--color-primary-dark);
+  color: #ffffff;
+}
+
+.prev-btn:hover {
+  background-color: #273444;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(23, 32, 42, 0.2);
+}
+
+.next-btn {
+  background-color: var(--color-primary-dark);
+  color: #ffffff;
+}
+
+.next-btn:hover,
+.next-btn.highlighted {
+  background-color: var(--color-accent);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(233, 162, 59, 0.35);
+}
+
+.pagination-dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 6px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #cbd5e1;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.dot:hover {
+  background-color: #94a3b8;
+}
+
+.dot.active {
+  background-color: var(--color-accent);
+  transform: scale(1.25);
+}
+
+/* ===================================================
+   FOOTER SECTION
+=================================================== */
+.footer {
+  background-color: var(--color-deep-dark);
+  color: #ffffff;
+  padding: 55px 24px 30px;
+  text-align: center;
+}
+
+.footer-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.footer-title {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  margin-bottom: 8px;
+}
+
+.footer-subtitle {
+  font-size: 13.5px;
+  color: #94a3b8;
+  margin-bottom: 35px;
+}
+
+.footer-divider {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.08);
+  margin-bottom: 25px;
+}
+
+.footer-copy {
+  font-size: 12px;
+  color: #64748b;
+}
+
+/* ===================================================
+   RESPONSIVE STYLES
+=================================================== */
+@media (max-width: 960px) {
+  .hero-title {
+    font-size: 38px;
+  }
+
+  .destination-card {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .card-info {
+    padding: 34px 28px;
+    height: auto;
+  }
+
+  .card-image-wrapper {
+    height: 320px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 680px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .hero-section {
+    padding: 55px 20px;
+  }
+
+  .hero-title {
+    font-size: 30px;
+  }
+
+  .destinations-section {
+    padding: 45px 16px 55px;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+
+  .card-specs {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .card-city {
+    font-size: 30px;
+  }
+
+  .slider-controls {
+    flex-wrap: wrap;
+  }
+}
+

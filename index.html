@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore The World - Popular Destinations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="#" class="logo">Explore<span class="logo-dot">.</span></a>
+      <nav class="nav-menu">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#destinations" class="nav-link">Destinations</a>
+        <a href="#about" class="nav-link">About Us</a>
+      </nav>
+      <a href="#explore" class="btn btn-dark nav-btn">Explore Now</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="home">
+    <div class="hero-container">
+      <div class="hero-content">
+        <span class="hero-tag">DISCOVER THE WORLD</span>
+        <h1 class="hero-title">
+          Explore The<br>
+          <span class="highlight">Beautiful World</span>
+        </h1>
+        <p class="hero-description">
+          Discover amazing places, explore different cultures and experience unforgettable journeys.
+        </p>
+        <a href="#destinations" class="btn btn-primary hero-btn">Start Exploring</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Destinations Section -->
+  <section class="destinations-section" id="destinations">
+    <div class="destinations-container">
+      
+      <div class="section-header">
+        <span class="section-tag">YOUR NEXT ADVENTURE</span>
+        <h2 class="section-title">Popular Destinations</h2>
+        <p class="section-subtitle">Explore some of the most beautiful cities in the world.</p>
+      </div>
+
+      <!-- Destination Card Slider -->
+      <div class="destination-slider-wrapper">
+        <div class="destination-card" id="destinationCard">
+          
+          <!-- Left: Information Column -->
+          <div class="card-info">
+            <span class="card-counter" id="cardCounter">01 / 04</span>
+            <span class="card-country" id="cardCountry">FRANCE</span>
+            <h3 class="card-city" id="cardCity">Paris</h3>
+            <p class="card-description" id="cardDescription">
+              Paris is one of the most beautiful cities in the world, famous for its art, architecture and romantic atmosphere.
+            </p>
+
+            <div class="card-specs">
+              <div class="spec-group">
+                <span class="spec-label">Continent</span>
+                <span class="spec-value" id="specContinent">Europe</span>
+              </div>
+              <div class="spec-group">
+                <span class="spec-label">Famous Food</span>
+                <span class="spec-value" id="specFood">Croissant, Macarons</span>
+              </div>
+              <div class="spec-group">
+                <span class="spec-label">Famous Place</span>
+                <span class="spec-value" id="specPlace">Eiffel Tower</span>
+              </div>
+              <div class="spec-group">
+                <span class="spec-label">Language</span>
+                <span class="spec-value" id="specLanguage">French</span>
+              </div>
+            </div>
+
+            <a href="#" class="btn btn-dark card-btn">Explore More</a>
+          </div>
+
+          <!-- Right: Image Column with Badge -->
+          <div class="card-image-wrapper">
+            <img src="images/paris.jpg" alt="Paris" class="card-img" id="cardImage">
+            <div class="destination-badge">
+              <span class="badge-label">DESTINATION</span>
+              <span class="badge-number" id="badgeNumber">01</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Slider Navigation Controls -->
+        <div class="slider-controls">
+          <button class="control-btn prev-btn" id="prevBtn" aria-label="Previous destination">
+            &larr; Previous
+          </button>
+          
+          <div class="pagination-dots" id="paginationDots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+            <span class="dot" data-index="3"></span>
+          </div>
+
+          <button class="control-btn next-btn" id="nextBtn" aria-label="Next destination">
+            Next &rarr;
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer" id="about">
+    <div class="footer-container">
+      <h3 class="footer-title">Travel. Discover. Enjoy.</h3>
+      <p class="footer-subtitle">Every destination has a story. Let's discover it together.</p>
+      <div class="footer-divider"></div>
+      <p class="footer-copy">&copy; 2026 Explore The World. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="JS/main.js"></script>
+</body>
+</html>
+
